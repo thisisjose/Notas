@@ -41,7 +41,7 @@ namespace Notas.VistaModelo.VMnotas
         {
             if (string.IsNullOrWhiteSpace(TxtTitulo) || string.IsNullOrWhiteSpace(TxtTexto))
             {
-                await MostrarAlerta("Ingresaste datos incorrectos o no ingresaste nada", "OK");
+                await MostrarAlerta2("Ingresaste datos incorrectos o no ingresaste nada", "OK");
                 return; 
             }
             var funcion = new DNotas();
@@ -56,6 +56,10 @@ namespace Notas.VistaModelo.VMnotas
         private async Task MostrarAlerta(string mensaje, string botonOK)
         {
             await Application.Current.MainPage.DisplayAlert("Éxito", mensaje, botonOK);
+        }
+        private async Task MostrarAlerta2(string mensaje, string botonOK)
+        {
+            await Application.Current.MainPage.DisplayAlert("Error", mensaje, botonOK);
         }
         public async Task Volver()
         {
