@@ -14,7 +14,7 @@
             </Image>
             <Image Source="https://i.ibb.co/6XyYMZX/bloc.png"
                    HorizontalOptions="CenterAndExpand"/>
-            <Image Source="https://i.ibb.co/MCTn4b2/pokebola.png"/>
+            <Image Source="https://i.ibb.co/tQDx6FW/lol.png"/>
         </StackLayout>
         <StackLayout Grid.Row="1" Margin="10">
             <!--Ingresa el titulo de la nota-->
@@ -57,7 +57,7 @@
                     BorderWidth="6"
                     CornerRadius="15"
                     FontSize="25"
-                    WidthRequest="60"
+                    WidthRequest="150"
                     HeightRequest="60"
                     Command="{Binding Insertarcommand}"/>
             </Frame>

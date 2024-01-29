@@ -16,7 +16,7 @@
             </Image>
             <Image Source="https://i.ibb.co/6XyYMZX/bloc.png" 
                 HorizontalOptions="CenterAndExpand" />
-            <Image Source="https://i.ibb.co/Xsh2hb1/pokebola.png" />
+            <Image Source="https://i.ibb.co/tQDx6FW/lol.png" />
         </StackLayout>
 
         <StackLayout Grid.Row="1" Margin="10">
@@ -48,39 +48,48 @@
 
             <!--BOTONES PARA EDITAR Y ELIMINAR XD-->
 
-            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-                <Button
-                        Text="Borrar"
-                        HorizontalOptions="Center"
-                        BackgroundColor="Red"
-                        BorderColor="Red"
-                        BorderWidth="6"
-                        CornerRadius="100"
-                        FontSize="9"
-                        WidthRequest="70"
-                        HeightRequest="70"
-                        Command="{Binding Eliminarcommand}"/>
+            <Grid HorizontalOptions="FillAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
 
-
-                <Frame HorizontalOptions="Center"
-                       Padding="6"
-                       Margin="100,0,0,0"
-                      CornerRadius="100"
-                       HasShadow="False"
-                       BackgroundColor="LightGreen">
+                <StackLayout Grid.Column="0" Orientation="Horizontal" HorizontalOptions="End">
                     <Button
-                       Text="Editar"
-                        HorizontalOptions="Center"
-                        BackgroundColor="LightGreen"
-                        BorderColor="LightGreen"
-                        BorderWidth="6"
-                        CornerRadius="100"
-                        FontSize="8"
-                        WidthRequest="60"
-                        HeightRequest="60"
-                        Command="{Binding Editarcommand}"/>
-                </Frame>
-            </StackLayout>
+            Text="Borrar"
+            HorizontalOptions="Center"
+            BackgroundColor="Red"
+            BorderColor="Red"
+            BorderWidth="6"
+            CornerRadius="100"
+            FontSize="9"
+            WidthRequest="150"
+            HeightRequest="70"
+            Command="{Binding Eliminarcommand}"/>
+                </StackLayout>
+
+                <StackLayout Grid.Column="1" Orientation="Horizontal" HorizontalOptions="Start">
+                    <Frame
+            HorizontalOptions="Center"
+            Padding="6"
+            CornerRadius="100"
+            HasShadow="False"
+            BackgroundColor="LightGreen">
+                        <Button
+                Text="Editar"
+                HorizontalOptions="Center"
+                BackgroundColor="LightGreen"
+                BorderColor="LightGreen"
+                BorderWidth="6"
+                CornerRadius="10"
+                          FontSize="8"
+               WidthRequest="150"
+               HeightRequest="0"
+               Command="{Binding Editarcommand}"/>
+                    </Frame>
+                </StackLayout>
+            </Grid>
+
         </StackLayout>
     </Grid>
 </ContentPage>

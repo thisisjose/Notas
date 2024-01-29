@@ -39,15 +39,17 @@ namespace Notas.VistaModelo.VMnotas
         #region PROCESOS
         public async Task Insertar()
         {
+            if (string.IsNullOrWhiteSpace(TxtTitulo) || string.IsNullOrWhiteSpace(TxtTexto))
+            {
+                await MostrarAlerta("Ingresaste datos incorrectos o no ingresaste nada", "OK");
+                return; 
+            }
             var funcion = new DNotas();
             var parametros = new Mnotas();
             parametros.Titulo = TxtTitulo;
             parametros.Texto = TxtTexto;
             await funcion.Insertarpokemon(parametros);
-            // Mostrar la alerta después de insertar la nota
             await MostrarAlerta("Nota guardada correctamente", "OK");
-
-            // Volver después de mostrar la alerta
             await Volver();
         }
 
