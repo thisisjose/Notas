@@ -51,6 +51,12 @@ namespace Notas.VistaModelo.VMnotas
 
             await funcion.Actualizar(parametros);
             await Volver();
+            await MostrarAlerta("Nota editada correctamente", "OK");
+
+        }
+        private async Task MostrarAlerta(string mensaje, string botonOK)
+        {
+            await Application.Current.MainPage.DisplayAlert("Éxito", mensaje, botonOK);
         }
 
         public async Task Eliminar()
@@ -59,6 +65,8 @@ namespace Notas.VistaModelo.VMnotas
             var funcion = new DNotas();
             await funcion.Eliminarpokemon(_Pokemon);
             await Volver(); ;
+            await MostrarAlerta("Nota Eliminada correctamente", "OK");
+
         }
 
         public async Task Volver()

@@ -40,7 +40,7 @@
                        BackgroundColor="DarkGray"
                        TextColor="White"
                        PlaceholderColor="DarkKhaki"
-                       HeightRequest="200"
+                       HeightRequest="150"
                        Margin="0,10,0,80"
                        Text="{Binding _Pokemon.Texto}"/>
             </StackLayout>

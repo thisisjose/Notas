@@ -17,6 +17,8 @@ namespace Notas.Vista.Notas
         {
             InitializeComponent();
             BindingContext = new VMregistrarnota(Navigation);
+
         }
+       
     }
 }

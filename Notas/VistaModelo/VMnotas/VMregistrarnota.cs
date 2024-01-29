@@ -44,10 +44,17 @@ namespace Notas.VistaModelo.VMnotas
             parametros.Titulo = TxtTitulo;
             parametros.Texto = TxtTexto;
             await funcion.Insertarpokemon(parametros);
+            // Mostrar la alerta después de insertar la nota
+            await MostrarAlerta("Nota guardada correctamente", "OK");
+
+            // Volver después de mostrar la alerta
             await Volver();
         }
 
-
+        private async Task MostrarAlerta(string mensaje, string botonOK)
+        {
+            await Application.Current.MainPage.DisplayAlert("Éxito", mensaje, botonOK);
+        }
         public async Task Volver()
         {
             await Navigation.PopAsync();

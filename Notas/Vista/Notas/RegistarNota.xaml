@@ -61,6 +61,7 @@
                     HeightRequest="60"
                     Command="{Binding Insertarcommand}"/>
             </Frame>
+            <Label Text="{Binding Mensaje}" TextColor="Green" FontSize="16" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
 
         </StackLayout>
     </Grid>
