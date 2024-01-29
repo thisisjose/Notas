@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Notas.Vista.Notas.RegistarNota">
+
+    <Grid RowDefinitions="80,*"
+          BackgroundColor="Gray">
+        <StackLayout Orientation="Horizontal" Padding="15">
+
+            <Image Source="https://i.ibb.co/QQT9zmJ/respuesta.png" WidthRequest="70">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding Volvercommand}"/>
+                </Image.GestureRecognizers>
+            </Image>
+            <Image Source="https://i.ibb.co/6XyYMZX/bloc.png"
+                   HorizontalOptions="CenterAndExpand"/>
+            <Image Source="https://i.ibb.co/MCTn4b2/pokebola.png"/>
+        </StackLayout>
+        <StackLayout Grid.Row="1" Margin="10">
+            <!--Ingresa el titulo de la nota-->
+            <StackLayout Orientation="Horizontal">
+                <Entry Placeholder="Ingrese el titulo"
+                       
+                       FontAttributes="Bold" 
+                       TextColor="White"
+                       PlaceholderColor="DarkKhaki"
+                       BackgroundColor="DarkGray"
+                       HorizontalOptions="StartAndExpand"
+                       Text="{Binding TxtTitulo}"/>
+            </StackLayout>
+            <!--Ingrese la descripcion de la nota-->
+            <StackLayout Orientation="Horizontal">
+                <Editor Placeholder="Ingresar texto" 
+                       FontAttributes="Bold"
+                       BackgroundColor="DarkGray"
+                       TextColor="White"
+                       PlaceholderColor="DarkKhaki"
+                       HeightRequest="200"
+                       Margin="0,10,0,80"
+                       Text="{Binding TxtTexto}"/>
+            </StackLayout>
+            <!--BOTON DE AGG -->
+
+            <Frame HorizontalOptions="Center"
+                   Padding="6"
+                   
+                   Margin="0,150,0,0"
+                   CornerRadius="30"
+                   HasShadow="False"
+                   BackgroundColor="DarkRed">
+                <Button
+                    Text="+"
+                    TextColor="White"
+                    HorizontalOptions="Center"
+                    BackgroundColor="DarkRed"
+                    BorderColor="DarkRed"
+                    BorderWidth="6"
+                    CornerRadius="15"
+                    FontSize="25"
+                    WidthRequest="60"
+                    HeightRequest="60"
+                    Command="{Binding Insertarcommand}"/>
+            </Frame>
+
+        </StackLayout>
+    </Grid>
+    </ContentPage>
